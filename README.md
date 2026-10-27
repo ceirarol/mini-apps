@@ -4,12 +4,10 @@ Espacio local para desarrollar aplicaciones pequeñas.
 
 ## Git
 
-El repositorio está preparado para trabajo local. Cuando dispongas de la URL del repositorio remoto, conéctalo así:
+El repositorio está preparado para trabajo local y conectado al remoto:
 
 ```powershell
-git remote add origin <URL-DEL-REPOSITORIO>
-git branch -M main
-git add .
-git commit -m "Initial project setup"
-git push -u origin main
+https://github.com/ceirarol/mini-apps.git
 ```
+
+La rama local `main` sigue a `origin/main`.
