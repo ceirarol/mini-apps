@@ -24,10 +24,9 @@
       </section>
 
       <section aria-labelledby="plan-title">
-        <div class="section-heading"><div><p class="eyebrow">MI PLAN</p><h2 id="plan-title">Hoy</h2></div><span class="progress-label"><b id="completed-count">1</b>/3</span></div>
-        <article class="task done"><span class="task-icon">✓</span><div><h3>Check-in de la mañana</h3><p>Completado</p></div></article>
-        <button class="task" data-view="practice"><span class="task-icon">◌</span><span><h3>Respiración de 2 minutos</h3><p>Una pausa para volver al presente</p></span><span>›</span></button>
-        <button class="task" data-view="reflection"><span class="task-icon">◌</span><span><h3>Escribir una reflexión</h3><p>Una idea, sin exigencias</p></span><span>›</span></button>
+        <div class="section-heading"><div><p class="eyebrow">MI PLAN</p><h2 id="plan-title">Hoy</h2></div><span class="progress-label"><b id="completed-count">0</b>/<span id="task-total">0</span></span></div>
+        <div id="task-list" aria-live="polite"></div>
+        <button id="add-task" class="add-task">+ Añadir a mi plan</button>
       </section>
 
       <section class="card streak"><span class="streak-icon">✦</span><div><strong>3 días cuidándote</strong><p>La constancia también puede ser suave.</p></div></section>
@@ -37,8 +36,9 @@
       </section>
 
       <section id="reflection-panel" class="panel" hidden aria-labelledby="reflection-title">
-        <button class="close" data-close="reflection-panel">×</button><p class="eyebrow">REFLEXIÓN</p><h2 id="reflection-title">¿Qué necesitas hoy?</h2><textarea id="reflection-text" placeholder="Escribe aquí, si te apetece…"></textarea><button id="save-reflection" class="primary">Guardar para mí</button><p id="save-message" class="quiet"></p>
+        <button class="close" data-close="reflection-panel">×</button><p class="eyebrow">REFLEXIÓN</p><h2 id="reflection-title">¿Qué necesitas hoy?</h2><textarea id="reflection-text" maxlength="800" placeholder="Escribe aquí, si te apetece…"></textarea><button id="save-reflection" class="primary">Guardar para mí</button><p id="save-message" class="quiet" aria-live="polite"></p><div id="reflection-history" class="reflection-history"></div>
       </section>
+      <dialog id="task-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">MI PLAN</p><h2>Añade una tarea suave</h2><label for="task-name">¿Qué quieres recordar?</label><input id="task-name" maxlength="70" placeholder="Por ejemplo: dar un paseo breve" /><button id="save-task" class="primary" value="default">Añadir al plan</button></form></dialog>
     </main>
     <nav aria-label="Navegación principal"><button class="active">Inicio</button><button data-view="practice">Practicar</button><button data-view="reflection">Reflexionar</button><button>Progreso</button></nav>
     <script src="app.js"></script>
