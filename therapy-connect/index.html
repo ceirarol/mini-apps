@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#41356e" /><title>En contacto</title><link rel="manifest" href="manifest.webmanifest" /><link rel="stylesheet" href="styles.css" /></head>
+  <body>
+    <main class="phone-shell">
+      <header><p class="eyebrow">TU ESPACIO DE APOYO</p><h1>En contacto</h1><p>Organiza tus citas y deja mensajes no urgentes.</p></header>
+      <section class="appointment" aria-labelledby="appointment-title">
+        <p class="eyebrow">PRÓXIMA CITA</p><h2 id="appointment-title">Jueves, 30 de octubre</h2><p>17:30 · Videollamada · 50 min</p><div class="appointment-actions"><button id="join-call">Unirme a la sesión</button><button id="change-appointment" class="outline">Cambiar cita</button></div><p id="appointment-message" class="quiet"></p>
+      </section>
+      <section aria-labelledby="chat-title"><div class="section-heading"><div><p class="eyebrow">MENSAJES</p><h2 id="chat-title">Terapeuta</h2></div><span class="online"><i></i>Disponible</span></div>
+        <div id="messages" class="messages"><article class="message incoming"><strong>Clara, tu terapeuta</strong><p>Hola, Alex. ¿Cómo ha ido la semana? Puedes contarme lo que quieras trabajar en la próxima sesión.</p><time>10:14</time></article><article class="message outgoing"><p>He tenido días variados, pero el ejercicio de respiración me ha ayudado.</p><time>10:21</time></article></div>
+        <form id="message-form" class="composer"><label class="sr-only" for="message-input">Escribe un mensaje</label><input id="message-input" maxlength="400" placeholder="Escribe un mensaje no urgente…" /><button aria-label="Enviar mensaje">↑</button></form><p id="chat-note" class="safety-note">Este chat no sustituye la atención urgente. Si estás en peligro inmediato, llama a emergencias.</p>
+      </section>
+      <section class="card" aria-labelledby="appointments-title"><div class="section-heading"><div><p class="eyebrow">PRÓXIMAMENTE</p><h2 id="appointments-title">Tus citas</h2></div><button id="add-appointment" class="text-button">Solicitar</button></div><button class="slot"><span class="date">06<br><small>NOV</small></span><span><strong>Sesión de seguimiento</strong><small>Jueves · 17:30</small></span><span>›</span></button></section>
+      <dialog id="request-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">SOLICITAR CITA</p><h2>Elige una preferencia</h2><label>Motivo<select><option>Sesión de seguimiento</option><option>Consulta breve</option><option>Primera sesión</option></select></label><label>Franja preferida<select><option>Tarde</option><option>Mañana</option><option>Me da igual</option></select></label><button id="request-button" value="confirm" class="primary">Enviar solicitud</button><p id="request-result" class="quiet"></p></form></dialog>
+    </main>
+    <nav aria-label="Navegación principal"><button class="active">Mensajes</button><button>Citas</button><button>Perfil</button></nav><script src="app.js"></script>
+  </body>
+</html>

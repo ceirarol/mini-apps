@@ -1,0 +1,6 @@
+const form=document.querySelector('#message-form'),input=document.querySelector('#message-input'),messages=document.querySelector('#messages');
+form.addEventListener('submit',event=>{event.preventDefault();const text=input.value.trim();if(!text)return;const item=document.createElement('article');item.className='message outgoing';item.innerHTML=`<p></p><time>Ahora</time>`;item.querySelector('p').textContent=text;messages.append(item);input.value='';document.querySelector('#chat-note').textContent='Mensaje guardado en esta demostración. No se ha enviado a nadie.';});
+document.querySelector('#join-call').addEventListener('click',()=>document.querySelector('#appointment-message').textContent='La videollamada se habilitará 10 minutos antes de la cita.');
+document.querySelector('#change-appointment').addEventListener('click',()=>document.querySelector('#request-dialog').showModal());document.querySelector('#add-appointment').addEventListener('click',()=>document.querySelector('#request-dialog').showModal());
+document.querySelector('#request-button').addEventListener('click',event=>{event.preventDefault();document.querySelector('#request-result').textContent='Solicitud guardada en esta demostración. Tu terapeuta confirmaría el horario.';});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('../service-worker.js');

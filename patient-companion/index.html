@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#174f52" />
+    <title>Mi acompañamiento</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="phone-shell">
+      <header>
+        <p class="eyebrow">MARTES, 27 DE OCTUBRE</p>
+        <div class="heading-row"><div><h1>Hola, Alex</h1><p>Vamos paso a paso.</p></div><button class="avatar" aria-label="Abrir perfil">A</button></div>
+      </header>
+
+      <section class="card check-in" aria-labelledby="checkin-title">
+        <div><p class="eyebrow">CHECK-IN</p><h2 id="checkin-title">¿Cómo te sientes ahora?</h2></div>
+        <div class="mood-picker" role="group" aria-label="Estado de ánimo">
+          <button data-mood="1" aria-label="Muy difícil">😞</button><button data-mood="2" aria-label="Difícil">😕</button><button data-mood="3" class="selected" aria-label="En calma">🙂</button><button data-mood="4" aria-label="Bien">😊</button>
+        </div>
+        <p id="mood-message" class="quiet">Registrarlo te puede ayudar a reconocer patrones.</p>
+      </section>
+
+      <section aria-labelledby="plan-title">
+        <div class="section-heading"><div><p class="eyebrow">MI PLAN</p><h2 id="plan-title">Hoy</h2></div><span class="progress-label"><b id="completed-count">1</b>/3</span></div>
+        <article class="task done"><span class="task-icon">✓</span><div><h3>Check-in de la mañana</h3><p>Completado</p></div></article>
+        <button class="task" data-view="practice"><span class="task-icon">◌</span><span><h3>Respiración de 2 minutos</h3><p>Una pausa para volver al presente</p></span><span>›</span></button>
+        <button class="task" data-view="reflection"><span class="task-icon">◌</span><span><h3>Escribir una reflexión</h3><p>Una idea, sin exigencias</p></span><span>›</span></button>
+      </section>
+
+      <section class="card streak"><span class="streak-icon">✦</span><div><strong>3 días cuidándote</strong><p>La constancia también puede ser suave.</p></div></section>
+
+      <section id="practice-panel" class="panel" hidden aria-labelledby="practice-title">
+        <button class="close" data-close="practice-panel">×</button><p class="eyebrow">EJERCICIO GUIADO</p><h2 id="practice-title">Respira conmigo</h2><p id="breath-instruction">Pulsa empezar cuando estés listo.</p><div id="breath-orb" class="breath-orb">2:00</div><button id="breath-button" class="primary">Empezar</button>
+      </section>
+
+      <section id="reflection-panel" class="panel" hidden aria-labelledby="reflection-title">
+        <button class="close" data-close="reflection-panel">×</button><p class="eyebrow">REFLEXIÓN</p><h2 id="reflection-title">¿Qué necesitas hoy?</h2><textarea id="reflection-text" placeholder="Escribe aquí, si te apetece…"></textarea><button id="save-reflection" class="primary">Guardar para mí</button><p id="save-message" class="quiet"></p>
+      </section>
+    </main>
+    <nav aria-label="Navegación principal"><button class="active">Inicio</button><button data-view="practice">Practicar</button><button data-view="reflection">Reflexionar</button><button>Progreso</button></nav>
+    <script src="app.js"></script>
+  </body>
+</html>
