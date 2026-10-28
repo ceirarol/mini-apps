@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#174f52" />
-    <title>Mi acompañamiento</title>
+    <title>Calma a mi manera</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -12,8 +12,13 @@
     <main class="phone-shell">
       <header>
         <p class="eyebrow">MARTES, 27 DE OCTUBRE</p>
-        <div class="heading-row"><div><h1>Hola, Alex</h1><p>Vamos paso a paso.</p></div><button class="avatar" aria-label="Abrir perfil">A</button></div>
+        <div class="heading-row"><div><h1>Calma a mi manera</h1><p>Un espacio breve, claro y tuyo.</p></div><button class="avatar" aria-label="Abrir perfil">A</button></div>
       </header>
+
+      <section class="card quick-calm" aria-labelledby="quick-title">
+        <div><p class="eyebrow">AHORA</p><h2 id="quick-title">¿Qué te ayudaría?</h2><p>Elige una herramienta, sin necesidad de explicarte.</p></div>
+        <button class="primary" data-view="quick">Abrir herramientas de calma</button>
+      </section>
 
       <section class="card check-in" aria-labelledby="checkin-title">
         <div><p class="eyebrow">CHECK-IN</p><h2 id="checkin-title">¿Cómo te sientes ahora?</h2></div>
@@ -33,6 +38,10 @@
 
       <section id="practice-panel" class="panel" hidden aria-labelledby="practice-title">
         <button class="close" data-close="practice-panel">×</button><p class="eyebrow">EJERCICIO GUIADO</p><h2 id="practice-title">Respira conmigo</h2><p id="breath-instruction">Pulsa empezar cuando estés listo.</p><div id="breath-orb" class="breath-orb">2:00</div><button id="breath-button" class="primary">Empezar</button>
+      </section>
+
+      <section id="quick-panel" class="panel" hidden aria-labelledby="quick-panel-title">
+        <button class="close" data-close="quick-panel">×</button><p class="eyebrow">HERRAMIENTAS DE CALMA</p><h2 id="quick-panel-title">Empieza por lo que te resulte posible</h2><div class="tool-grid"><button data-quick="space">Necesito espacio</button><button data-quick="grounding">Quiero aterrizar</button><button data-quick="senses">Hay demasiados estímulos</button><button data-view="practice">Quiero respirar</button></div><div id="quick-result" class="quick-result" aria-live="polite"><strong>No hay una respuesta correcta.</strong><p>Elige lo que sea más amable para ti en este momento.</p></div>
       </section>
 
       <section id="reflection-panel" class="panel" hidden aria-labelledby="reflection-title">
