@@ -36,12 +36,8 @@
 
       <section class="card streak"><span class="streak-icon">✦</span><div><strong><span id="regulation-count">0</span> herramientas usadas</strong><p>La constancia también puede ser suave.</p></div></section>
 
-      <section id="practice-panel" class="panel" hidden aria-labelledby="practice-title">
-        <button class="close" data-close="practice-panel">×</button><p class="eyebrow">RESPIRACIÓN</p><h2 id="practice-title">Respira conmigo</h2><div class="duration-picker" role="group" aria-label="Duración"><button data-duration="60">1</button><button data-duration="120" class="selected">2</button><button data-duration="180">3</button></div><p id="breath-instruction" class="sr-only">Pulsa empezar cuando estés listo.</p><div id="breath-orb" class="breath-orb">2:00</div><button id="breath-button" class="primary">Empezar</button>
-      </section>
-
       <section id="quick-panel" class="panel" hidden aria-labelledby="quick-panel-title">
-        <button class="close" data-close="quick-panel">×</button><p class="eyebrow">HERRAMIENTAS DE CALMA</p><h2 id="quick-panel-title">Empieza por lo que te resulte posible</h2><div class="tool-grid"><button data-tool="space">Necesito espacio</button><button data-tool="grounding">5‑4‑3‑2‑1</button><button data-tool="sensory">Reducir estímulos</button><button data-tool="tension">Soltar tensión</button><button data-view="practice" class="wide-tool">Respiración guiada · 2 min</button></div><p class="quiet">No tienes que completar nada. Puedes salir cuando quieras.</p>
+        <button class="close" data-close="quick-panel">×</button><p class="eyebrow">HERRAMIENTAS DE CALMA</p><h2 id="quick-panel-title">Elige una acción ahora</h2><div class="tool-grid"><button data-tool="breathing" class="wide-tool">Respirar a mi ritmo</button><button data-tool="tension">Descargar tensión</button><button data-tool="grounding">Volver al entorno</button><button data-tool="sensory">Bajar intensidad</button><button data-tool="space">Crear espacio</button></div><p class="quiet">Nada se completa “bien”. Puedes parar cuando quieras.</p>
       </section>
 
       <section id="tool-panel" class="panel" hidden aria-labelledby="tool-title">
@@ -57,7 +53,7 @@
       <dialog id="task-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">MI PLAN</p><h2>Añade una tarea suave</h2><label for="task-name">¿Qué quieres recordar?</label><input id="task-name" maxlength="70" placeholder="Por ejemplo: dar un paseo breve" /><button id="save-task" class="primary" value="default">Añadir al plan</button></form></dialog>
       <dialog id="preferences-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">PREFERENCIAS</p><h2>A tu manera</h2><label class="switch-row"><span>Vibración</span><input id="haptics-setting" type="checkbox" checked /></label><label class="switch-row"><span>Menos movimiento</span><input id="motion-setting" type="checkbox" /></label><label class="switch-row"><span>Menos estímulos visuales</span><input id="stimulus-setting" type="checkbox" /></label><button id="save-preferences" class="primary" value="default">Guardar</button></form></dialog>
     </main>
-    <nav aria-label="Navegación principal"><button class="active" data-view="home">Inicio</button><button data-view="practice">Practicar</button><button data-view="reflection">Reflexionar</button><button data-view="progress">Progreso</button></nav>
+    <nav aria-label="Navegación principal"><button class="active" data-view="home">Inicio</button><button data-view="reflection">Reflexionar</button><button data-view="progress">Progreso</button></nav>
     <script src="app.js"></script>
   </body>
 </html>
