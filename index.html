@@ -20,6 +20,12 @@
         <button class="primary" data-view="quick">Abrir herramientas de calma</button>
       </section>
 
+      <section class="card departure-kit" aria-labelledby="departure-title">
+        <div class="section-heading"><div><p class="eyebrow">ANTES DE SALIR</p><h2 id="departure-title">Mi kit</h2></div><span class="xp-label"><b id="xp-count">0</b> XP</span></div>
+        <div id="departure-list" class="bubble-list" aria-live="polite"></div>
+        <button id="add-departure" class="add-task">+ Añadir a mi kit</button>
+      </section>
+
       <section class="card check-in" aria-labelledby="checkin-title">
         <div><p class="eyebrow">CHECK-IN</p><h2 id="checkin-title">¿Cómo te sientes ahora?</h2></div>
         <div class="mood-picker" role="group" aria-label="Estado de ánimo">
@@ -51,6 +57,7 @@
         <button class="close" data-close="progress-panel">×</button><p class="eyebrow">MI PROGRESO</p><h2 id="progress-title">A tu ritmo</h2><div class="progress-grid"><article><strong id="progress-tools">0</strong><span>herramientas usadas</span></article><article><strong id="progress-tasks">0 de 3</strong><span>tareas de hoy</span></article><article><strong id="progress-notes">0</strong><span>notas guardadas</span></article></div><p id="progress-message" class="quiet" aria-live="polite"></p>
       </section>
       <dialog id="task-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">MI PLAN</p><h2>Añade una tarea suave</h2><label for="task-name">¿Qué quieres recordar?</label><input id="task-name" maxlength="70" placeholder="Por ejemplo: dar un paseo breve" /><button id="save-task" class="primary" value="default">Añadir al plan</button></form></dialog>
+      <dialog id="departure-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">MI KIT</p><h2>Añade una burbuja</h2><label for="departure-name">¿Qué te ayuda llevar?</label><input id="departure-name" maxlength="45" placeholder="Por ejemplo: auriculares" /><button id="save-departure" class="primary" value="default">Añadir a mi kit</button></form></dialog>
       <dialog id="preferences-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">PREFERENCIAS</p><h2>A tu manera</h2><label class="switch-row"><span>Vibración</span><input id="haptics-setting" type="checkbox" checked /></label><label class="switch-row"><span>Menos movimiento</span><input id="motion-setting" type="checkbox" /></label><label class="switch-row"><span>Menos estímulos visuales</span><input id="stimulus-setting" type="checkbox" /></label><button id="save-preferences" class="primary" value="default">Guardar</button></form></dialog>
     </main>
     <nav aria-label="Navegación principal"><button class="active" data-view="home">Inicio</button><button data-view="reflection">Reflexionar</button><button data-view="progress">Progreso</button></nav>
