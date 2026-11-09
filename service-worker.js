@@ -1,4 +1,4 @@
-const CACHE = 'adult-calm-v6';
+const CACHE = 'adult-calm-v7';
 const files = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest'];
 
 self.addEventListener('install', event => {
