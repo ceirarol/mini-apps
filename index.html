@@ -34,14 +34,18 @@
         <button id="add-task" class="add-task">+ Añadir a mi plan</button>
       </section>
 
-      <section class="card streak"><span class="streak-icon">✦</span><div><strong>3 días cuidándote</strong><p>La constancia también puede ser suave.</p></div></section>
+      <section class="card streak"><span class="streak-icon">✦</span><div><strong><span id="regulation-count">0</span> herramientas usadas</strong><p>La constancia también puede ser suave.</p></div></section>
 
       <section id="practice-panel" class="panel" hidden aria-labelledby="practice-title">
         <button class="close" data-close="practice-panel">×</button><p class="eyebrow">EJERCICIO GUIADO</p><h2 id="practice-title">Respira conmigo</h2><p id="breath-instruction">Pulsa empezar cuando estés listo.</p><div id="breath-orb" class="breath-orb">2:00</div><button id="breath-button" class="primary">Empezar</button>
       </section>
 
       <section id="quick-panel" class="panel" hidden aria-labelledby="quick-panel-title">
-        <button class="close" data-close="quick-panel">×</button><p class="eyebrow">HERRAMIENTAS DE CALMA</p><h2 id="quick-panel-title">Empieza por lo que te resulte posible</h2><div class="tool-grid"><button data-quick="space">Necesito espacio</button><button data-quick="grounding">Quiero aterrizar</button><button data-quick="senses">Hay demasiados estímulos</button><button data-view="practice">Quiero respirar</button></div><div id="quick-result" class="quick-result" aria-live="polite"><strong>No hay una respuesta correcta.</strong><p>Elige lo que sea más amable para ti en este momento.</p></div>
+        <button class="close" data-close="quick-panel">×</button><p class="eyebrow">HERRAMIENTAS DE CALMA</p><h2 id="quick-panel-title">Empieza por lo que te resulte posible</h2><div class="tool-grid"><button data-tool="space">Necesito espacio</button><button data-tool="grounding">5‑4‑3‑2‑1</button><button data-tool="sensory">Reducir estímulos</button><button data-tool="tension">Soltar tensión</button><button data-view="practice" class="wide-tool">Respiración guiada · 2 min</button></div><p class="quiet">No tienes que completar nada. Puedes salir cuando quieras.</p>
+      </section>
+
+      <section id="tool-panel" class="panel" hidden aria-labelledby="tool-title">
+        <button class="close" data-close="tool-panel">×</button><p id="tool-kicker" class="eyebrow">HERRAMIENTA</p><h2 id="tool-title"></h2><p id="tool-progress" class="quiet"></p><div id="tool-step" class="guided-step" aria-live="polite"></div><button id="tool-next" class="primary">Siguiente</button><button id="tool-finish" class="secondary" hidden>Terminar por ahora</button><p class="safety-note">Esta app es apoyo de autocuidado; no sustituye atención profesional ni de urgencias.</p>
       </section>
 
       <section id="reflection-panel" class="panel" hidden aria-labelledby="reflection-title">
