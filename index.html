@@ -3,64 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#174f52" />
-    <title>Calma a mi manera</title>
+    <meta name="theme-color" content="#26213f" />
+    <title>Brisa</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="phone-shell">
-      <header>
-        <p class="eyebrow">TU ESPACIO · HOY</p>
-        <div class="heading-row"><div><h1>Calma, a tu manera.</h1><p>Sin exigencias. Elige lo que te sirva ahora.</p></div><button class="avatar" data-open-preferences aria-label="Abrir preferencias">⚙</button></div>
-      </header>
-
-      <section class="card quick-calm" aria-labelledby="quick-title">
-        <div><p class="eyebrow">PAUSA</p><h2 id="quick-title">¿Dónde pones la atención?</h2><p>Una pausa guiada o un juego breve. Tú eliges.</p></div>
-        <button class="primary" data-view="quick">Explorar pausas <span>→</span></button>
+    <main class="app-shell">
+      <section id="home-view" class="view">
+        <header class="topbar"><span class="wordmark">brisa</span><button id="token-button" class="token-pill" aria-label="Tus tokens"><span>✦</span> <b id="token-count">0</b></button></header>
+        <button class="companion-card" data-view="wardrobe" aria-label="Abrir el espacio de tu compañera">
+          <div id="avatar" class="avatar meadow" aria-hidden="true"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div></div>
+          <div><p class="eyebrow">TU COMPAÑERA</p><h1 id="avatar-name">Nube</h1><p id="companion-message">Está aquí contigo.</p></div><span class="arrow">›</span>
+        </button>
+        <section class="hero">
+          <p class="eyebrow">EN ESTE MOMENTO</p><h2>¿Cómo está el mundo por dentro?</h2>
+          <div class="state-grid"><button data-sos="overload"><span>⌁</span><b>Demasiado</b><small>Bajar intensidad</small></button><button data-sos="thoughts"><span>☁</span><b>Mi mente corre</b><small>Ocupar la atención</small></button><button data-sos="present"><span>◌</span><b>Quiero volver</b><small>Conectar con aquí</small></button></div>
+        </section>
+        <section class="today-card"><div><p class="eyebrow">VUESTRO CAMINO</p><h3><span id="session-count">0</span> pausas compartidas</h3><p>Las herramientas que uses le dan energía a <span id="avatar-name-inline">Nube</span>.</p></div><div class="spark-orbit">✦</div></section>
       </section>
 
-      <section class="card departure-kit" aria-labelledby="departure-title">
-        <div class="section-heading"><div><p class="eyebrow">ANTES DE SALIR</p><h2 id="departure-title">Mi kit</h2></div><span class="xp-label"><b id="xp-count">0</b> XP</span></div>
-        <div id="departure-list" class="bubble-list" aria-live="polite"></div>
-        <button id="add-departure" class="add-task">+ Añadir a mi kit</button>
+      <section id="tools-view" class="view" hidden>
+        <header class="view-header"><button class="back" data-view="home">‹</button><div><p class="eyebrow">CAJA DE CALMA</p><h2>Elige una pausa</h2></div></header>
+        <div class="tool-list"><button data-tool="breathing"><span class="tool-art breathe">◌</span><span><b>Respiración profunda</b><small>Un ritmo visual para seguir</small></span><em>2 min</em></button><button data-tool="senses"><span class="tool-art senses">◉</span><span><b>5 · 4 · 3 · 2 · 1</b><small>Una ruta hacia el presente</small></span><em>1 min</em></button><button data-tool="rhythm"><span class="tool-art rhythm">∿</span><span><b>Sigue el pulso</b><small>Foco breve y repetitivo</small></span><em>1 min</em></button><button data-tool="pattern"><span class="tool-art pattern">✦</span><span><b>Encuentra el patrón</b><small>Descansa en un solo detalle</small></span><em>1 min</em></button></div>
       </section>
 
-      <section class="card check-in" aria-labelledby="checkin-title">
-        <div><p class="eyebrow">CHECK-IN</p><h2 id="checkin-title">¿Cómo te sientes ahora?</h2></div>
-        <div class="mood-picker" role="group" aria-label="Estado de ánimo">
-          <button data-mood="1" aria-label="Muy difícil">😞</button><button data-mood="2" aria-label="Difícil">😕</button><button data-mood="3" class="selected" aria-label="En calma">🙂</button><button data-mood="4" aria-label="Bien">😊</button>
-        </div>
-        <p id="mood-message" class="quiet">Registrarlo te puede ayudar a reconocer patrones.</p>
+      <section id="wardrobe-view" class="view" hidden>
+        <header class="view-header"><button class="back" data-view="home">‹</button><div><p class="eyebrow">ESPACIO DE VUESTRA AMISTAD</p><h2>Tu compañera</h2></div></header>
+        <div class="wardrobe-hero"><div id="wardrobe-avatar" class="avatar meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div></div><p><b id="wardrobe-name">Nube</b> crece con cada pausa que compartís.</p></div>
+        <button id="rename-button" class="text-button">Cambiar nombre</button>
+        <p class="eyebrow section-label">DETALLES PARA DESBLOQUEAR</p><div id="wardrobe-items" class="wardrobe-items"></div>
       </section>
 
-      <section aria-labelledby="plan-title">
-        <div class="section-heading"><div><p class="eyebrow">MI PLAN</p><h2 id="plan-title">Hoy</h2></div><span class="progress-label"><b id="completed-count">0</b>/<span id="task-total">0</span></span></div>
-        <div id="task-list" aria-live="polite"></div>
-        <button id="add-task" class="add-task">+ Añadir a mi plan</button>
+      <section id="sos-view" class="view focus-view" hidden>
+        <header class="focus-header"><button class="close-focus" data-view="home">×</button><span id="focus-label">PAUSA</span></header>
+        <div class="focus-copy"><p id="focus-kicker">ESTÁS A SALVO</p><h2 id="focus-title">Vamos a bajar el volumen.</h2><p id="focus-text">Elige una acción pequeña. No necesitas hacer nada más.</p></div>
+        <div id="focus-actions" class="focus-actions"></div>
+        <div class="focus-companion"><div class="avatar small meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div></div><p id="focus-companion-text">Nube se queda aquí.</p></div>
       </section>
 
-      <section class="card streak"><span class="streak-icon">✦</span><div><strong><span id="regulation-count">0</span> herramientas usadas</strong><p>La constancia también puede ser suave.</p></div></section>
-
-      <section id="quick-panel" class="panel" hidden aria-labelledby="quick-panel-title">
-        <button class="close" data-close="quick-panel">×</button><p class="eyebrow">PAUSAS</p><h2 id="quick-panel-title">Elige una forma de volver</h2><div class="tool-grid"><button data-tool="breathing"><b>Respiración profunda</b><span>Ritmo visual</span></button><button data-tool="senses"><b>5 · 4 · 3 · 2 · 1</b><span>Volver al presente</span></button><button data-tool="rhythm"><b>Sigue el ritmo</b><span>Foco y repetición</span></button><button data-tool="grounding"><b>Encuentra el patrón</b><span>Atención visual</span></button><button data-tool="sensory"><b>Despejar</b><span>Orden visual</span></button><button data-tool="space"><b>Sigue la luz</b><span>Foco en movimiento</span></button></div><p class="quiet">No tienes que terminar ninguna.</p>
+      <section id="tool-view" class="view focus-view" hidden>
+        <header class="focus-header"><button class="close-focus" data-view="tools">×</button><span id="tool-label">PAUSA</span></header><div class="focus-copy"><p id="tool-kicker">A TU RITMO</p><h2 id="tool-title"></h2></div><div id="tool-stage"></div><button id="finish-tool" class="finish-button" hidden>Terminar pausa ✦</button>
       </section>
-
-      <section id="tool-panel" class="panel" hidden aria-labelledby="tool-title">
-        <button class="close" data-close="tool-panel">×</button><div class="tool-heading"><span id="tool-icon" aria-hidden="true"></span><div><p class="eyebrow">HERRAMIENTA</p><h2 id="tool-title"></h2></div><output id="tool-score" aria-live="polite"></output></div><div id="tool-stage" class="interactive-stage"></div><button id="tool-reset" class="secondary" hidden aria-label="Reiniciar herramienta">↻ Reiniciar</button>
-      </section>
-
-      <section id="reflection-panel" class="panel" hidden aria-labelledby="reflection-title">
-        <button class="close" data-close="reflection-panel">×</button><p class="eyebrow">REFLEXIÓN</p><h2 id="reflection-title">¿Qué necesitas hoy?</h2><textarea id="reflection-text" maxlength="800" placeholder="Escribe aquí, si te apetece…"></textarea><button id="save-reflection" class="primary">Guardar para mí</button><p id="save-message" class="quiet" aria-live="polite"></p><div id="reflection-history" class="reflection-history"></div>
-      </section>
-      <section id="progress-panel" class="panel" hidden aria-labelledby="progress-title">
-        <button class="close" data-close="progress-panel">×</button><p class="eyebrow">MI PROGRESO</p><h2 id="progress-title">A tu ritmo</h2><div class="progress-grid"><article><strong id="progress-tools">0</strong><span>herramientas usadas</span></article><article><strong id="progress-tasks">0 de 3</strong><span>tareas de hoy</span></article><article><strong id="progress-notes">0</strong><span>notas guardadas</span></article></div><p id="progress-message" class="quiet" aria-live="polite"></p>
-      </section>
-      <dialog id="task-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">MI PLAN</p><h2>Añade una tarea suave</h2><label for="task-name">¿Qué quieres recordar?</label><input id="task-name" maxlength="70" placeholder="Por ejemplo: dar un paseo breve" /><button id="save-task" class="primary" value="default">Añadir al plan</button></form></dialog>
-      <dialog id="departure-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">MI KIT</p><h2>Añade una burbuja</h2><label for="departure-name">¿Qué te ayuda llevar?</label><input id="departure-name" maxlength="45" placeholder="Por ejemplo: auriculares" /><button id="save-departure" class="primary" value="default">Añadir a mi kit</button></form></dialog>
-      <dialog id="preferences-dialog"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">PREFERENCIAS</p><h2>A tu manera</h2><label class="switch-row"><span>Vibración</span><input id="haptics-setting" type="checkbox" checked /></label><label class="switch-row"><span>Menos movimiento</span><input id="motion-setting" type="checkbox" /></label><label class="switch-row"><span>Menos estímulos visuales</span><input id="stimulus-setting" type="checkbox" /></label><button id="save-preferences" class="primary" value="default">Guardar</button></form></dialog>
     </main>
-    <nav aria-label="Navegación principal"><button class="active" data-view="home">Inicio</button><button data-view="reflection">Reflexionar</button><button data-view="progress">Progreso</button></nav>
+    <nav><button class="active" data-view="home"><span>⌂</span>Inicio</button><button data-view="tools"><span>◌</span>Pausas</button><button data-view="wardrobe"><span>✦</span>Compañera</button></nav>
+    <dialog id="name-dialog"><form method="dialog"><p class="eyebrow">VUESTRA COMPAÑERA</p><h2>¿Cómo se llama?</h2><input id="name-input" maxlength="16" placeholder="Por ejemplo: Nube" /><button id="save-name" class="dialog-primary" value="default">Guardar</button></form></dialog>
     <script src="app.js"></script>
   </body>
 </html>
