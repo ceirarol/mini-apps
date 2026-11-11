@@ -1,5 +1,5 @@
-const CACHE = 'brisa-v9';
-const files = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './assets/brisa-companion.png', './assets/brisa-rabbit.png', './assets/brisa-panda.png', './assets/brisa-otter.png', './assets/brisa-dragon.png', './assets/brisa-hedgehog.png'];
+const CACHE = 'brisa-v10';
+const files = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './assets/brisa-companion.png', './assets/brisa-rabbit.png', './assets/brisa-panda.png', './assets/brisa-otter.png', './assets/brisa-dragon.png', './assets/brisa-hedgehog.png', './assets/glasses-vista.png', './assets/glasses-sol.png', './assets/glasses-corazon.png', './assets/glasses-cumple.png', './assets/glasses-navidad.png', './assets/glasses-halloween.png'];
 
 self.addEventListener('install', event => {
   self.skipWaiting();
