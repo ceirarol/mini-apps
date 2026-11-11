@@ -13,7 +13,7 @@
       <section id="home-view" class="view">
         <header class="topbar"><span class="wordmark">brisa</span><button id="token-button" class="token-pill" aria-label="Tus tokens"><span>✦</span> <b id="token-count">0</b></button></header>
         <button class="companion-card" data-view="wardrobe" aria-label="Abrir el espacio de tu compañera">
-          <div id="avatar" class="avatar meadow" aria-hidden="true"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div></div>
+          <div id="avatar" class="avatar meadow" aria-hidden="true"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div>
           <div><p class="eyebrow">TU COMPAÑERA</p><h1 id="avatar-name">Nube</h1><p id="companion-message">Está aquí contigo.</p></div><span class="arrow">›</span>
         </button>
         <section class="hero">
@@ -30,18 +30,18 @@
 
       <section id="wardrobe-view" class="view" hidden>
         <header class="view-header"><button class="back" data-view="home">‹</button><div><p class="eyebrow">ESPACIO DE VUESTRA AMISTAD</p><h2>Tu compañera</h2></div></header>
-        <div class="wardrobe-hero"><div id="wardrobe-avatar" class="avatar meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div></div><p><b id="wardrobe-name">Nube</b> crece con cada pausa que compartís.</p><span id="growth-stage" class="growth-stage">Semilla · 0 / 5 pausas</span></div>
+        <div class="wardrobe-hero"><div id="wardrobe-avatar" class="avatar meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div><p><b id="wardrobe-name">Nube</b> crece con cada pausa que compartís.</p><span id="growth-stage" class="growth-stage">Semilla · 0 / 5 pausas</span></div>
         <button id="rename-button" class="text-button">Cambiar nombre</button>
         <p class="eyebrow section-label">ELIGE COMPAÑERA</p><div id="avatar-choices" class="avatar-choices"></div>
-        <p class="eyebrow section-label">DETALLES PARA DESBLOQUEAR</p><div id="wardrobe-items" class="wardrobe-items"></div>
-        <aside id="review-panel" class="review-panel" hidden><p class="eyebrow">MODO DE REVISIÓN</p><b>Prueba el armario sin completar pausas</b><div><button id="review-tokens">+100 fichas</button><button id="review-growth">+5 pausas</button></div><small>Esta vista usa un progreso de prueba independiente.</small></aside>
+        <p class="eyebrow section-label">ARMARIO</p><div id="wardrobe-tabs" class="wardrobe-tabs"></div><p id="wardrobe-category" class="wardrobe-category"></p><div id="wardrobe-items" class="wardrobe-items"></div>
+        <aside id="review-panel" class="review-panel" hidden><p class="eyebrow">MODO DE REVISIÓN</p><b>Prueba el armario sin completar pausas</b><div><button id="review-tokens">+100 fichas</button><button id="review-growth">+5 pausas</button><button id="review-unlock">Todo</button></div><small>Esta vista usa un progreso de prueba independiente.</small></aside>
       </section>
 
       <section id="sos-view" class="view focus-view" hidden>
         <header class="focus-header"><button class="close-focus" data-view="home">×</button><span id="focus-label">PAUSA</span></header>
         <div class="focus-copy"><p id="focus-kicker">ESTÁS A SALVO</p><h2 id="focus-title">Vamos a bajar el volumen.</h2><p id="focus-text">Elige una acción pequeña. No necesitas hacer nada más.</p></div>
         <div id="focus-actions" class="focus-actions"></div>
-        <div class="focus-companion"><div class="avatar small meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div></div><p id="focus-companion-text">Nube se queda aquí.</p></div>
+        <div class="focus-companion"><div class="avatar small meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div><p id="focus-companion-text">Nube se queda aquí.</p></div>
       </section>
 
       <section id="tool-view" class="view focus-view" hidden>
