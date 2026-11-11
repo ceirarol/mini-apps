@@ -1,5 +1,5 @@
-const CACHE = 'brisa-v2';
-const files = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest'];
+const CACHE = 'brisa-v3';
+const files = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './assets/brisa-companion.png', './assets/brisa-rabbit.png', './assets/brisa-panda.png'];
 
 self.addEventListener('install', event => {
   self.skipWaiting();
