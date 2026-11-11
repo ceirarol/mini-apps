@@ -1,4 +1,4 @@
-const CACHE = 'brisa-v5';
+const CACHE = 'brisa-v6';
 const files = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './assets/brisa-companion.png', './assets/brisa-rabbit.png', './assets/brisa-panda.png', './assets/brisa-otter.png', './assets/brisa-dragon.png', './assets/brisa-hedgehog.png'];
 
 self.addEventListener('install', event => {
