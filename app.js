@@ -6,7 +6,7 @@ const save=()=>localStorage.setItem(key,JSON.stringify(state));
 const views=[...document.querySelectorAll('.view')];
 const toolLabels={breathing:['RESPIRACIÓN','Respiración profunda','Sigue el movimiento. No hay ritmo correcto.'],senses:['PRESENTE','5 · 4 · 3 · 2 · 1','Mira fuera de la pantalla y marca cada cosa que encuentres.'],rhythm:['PULSO','Sigue el pulso','Deja que el ritmo ocupe un poco de espacio.'],pattern:['FOCO','Encuentra el patrón','Busca el mismo color y vuelve a empezar.']};
 const items=[['star','Estrella','12'],['flower','Flor','18'],['scarf','Pañuelo','25'],['crown','Corona','40']];
-const avatars={fox:['fox','Gatita lavanda','./assets/brisa-companion.png'],rabbit:['rabbit','Coneja lunar','./assets/brisa-rabbit.png'],panda:['panda','Panda rojo','./assets/brisa-panda.png']};
+const avatars={fox:['fox','Gatita lavanda','./assets/brisa-companion.png'],rabbit:['rabbit','Coneja lunar','./assets/brisa-rabbit.png'],panda:['panda','Panda rojo','./assets/brisa-panda.png'],otter:['otter','Nutria','./assets/brisa-otter.png'],dragon:['dragon','Dragoncito','./assets/brisa-dragon.png'],hedgehog:['hedgehog','Erizo','./assets/brisa-hedgehog.png']};
 function growth(){return state.sessions>=15?2:state.sessions>=5?1:0}
 function growthCopy(){const level=growth();return level===0?['Semilla',5]:level===1?['Exploradora',15]:['Guía',null]}
 function open(view){views.forEach(item=>item.hidden=item.id!==`${view}-view`);document.querySelectorAll('nav button').forEach(button=>button.classList.toggle('active',button.dataset.view===view));}
