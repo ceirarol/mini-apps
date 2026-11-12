@@ -6,14 +6,14 @@
     <meta name="theme-color" content="#26213f" />
     <title>Brisa</title>
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=18" />
   </head>
   <body>
     <main class="app-shell">
       <section id="home-view" class="view">
         <header class="topbar"><span class="wordmark">brisa</span><button id="token-button" class="token-pill" aria-label="Tus tokens"><span>✦</span> <b id="token-count">0</b></button></header>
         <button class="companion-card" data-view="wardrobe" aria-label="Abrir el espacio de tu compañera">
-          <div id="avatar" class="avatar meadow" aria-hidden="true"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div>
+          <div id="avatar" class="avatar meadow" aria-hidden="true"><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div>
           <div><p class="eyebrow">TU COMPAÑERA</p><h1 id="avatar-name">Nube</h1><p id="companion-message">Está aquí contigo.</p></div><span class="arrow">›</span>
         </button>
         <section class="hero">
@@ -30,7 +30,7 @@
 
       <section id="wardrobe-view" class="view" hidden>
         <header class="view-header"><button class="back" data-view="home">‹</button><div><p class="eyebrow">ESPACIO DE VUESTRA AMISTAD</p><h2>Tu compañera</h2></div></header>
-        <div class="wardrobe-hero"><div id="wardrobe-avatar" class="avatar meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div><p><b id="wardrobe-name">Nube</b> crece con cada pausa que compartís.</p><span id="growth-stage" class="growth-stage">Semilla · 0 / 5 pausas</span></div>
+        <div class="wardrobe-hero"><div id="wardrobe-avatar" class="avatar meadow"><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div><p><b id="wardrobe-name">Nube</b> crece con cada pausa que compartís.</p><span id="growth-stage" class="growth-stage">Semilla · 0 / 5 pausas</span></div>
         <button id="rename-button" class="text-button">Cambiar nombre</button>
         <p class="eyebrow section-label">ELIGE COMPAÑERA</p><div id="avatar-choices" class="avatar-choices"></div>
         <p class="eyebrow section-label">ARMARIO</p><div id="wardrobe-tabs" class="wardrobe-tabs"></div><p id="wardrobe-category" class="wardrobe-category"></p><div id="wardrobe-items" class="wardrobe-items"></div>
@@ -41,7 +41,7 @@
         <header class="focus-header"><button class="close-focus" data-view="home">×</button><span id="focus-label">PAUSA</span></header>
         <div class="focus-copy"><p id="focus-kicker">ESTÁS A SALVO</p><h2 id="focus-title">Vamos a bajar el volumen.</h2><p id="focus-text">Elige una acción pequeña. No necesitas hacer nada más.</p></div>
         <div id="focus-actions" class="focus-actions"></div>
-        <div class="focus-companion"><div class="avatar small meadow"><div class="avatar-ear left"></div><div class="avatar-ear right"></div><div class="avatar-face"><i></i><i></i><span></span></div><div class="avatar-accessory"></div><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div><p id="focus-companion-text">Nube se queda aquí.</p></div>
+        <div class="focus-companion"><div class="avatar small meadow"><span class="avatar-layer" data-category="outfit"></span><span class="avatar-layer" data-category="neck"></span><span class="avatar-layer" data-category="glasses"></span><span class="avatar-layer" data-category="hat"></span><span class="avatar-layer" data-category="prop"></span></div><p id="focus-companion-text">Nube se queda aquí.</p></div>
       </section>
 
       <section id="tool-view" class="view focus-view" hidden>
@@ -50,6 +50,6 @@
     </main>
     <nav><button class="active" data-view="home"><span>⌂</span>Inicio</button><button data-view="tools"><span>◌</span>Pausas</button><button data-view="wardrobe"><span>✦</span>Compañera</button></nav>
     <dialog id="name-dialog"><form method="dialog"><p class="eyebrow">VUESTRA COMPAÑERA</p><h2>¿Cómo se llama?</h2><input id="name-input" maxlength="16" placeholder="Por ejemplo: Nube" /><button id="save-name" class="dialog-primary" value="default">Guardar</button></form></dialog>
-    <script src="app.js?v=13"></script>
+    <script src="app.js?v=18"></script>
   </body>
 </html>
